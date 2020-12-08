@@ -46,14 +46,13 @@ public class ShoppingList {
 		}
 		
 		valueComparator vc = new valueComparator(priceList);
-		
 		TreeMap<String, Double> sortedPriceList = new TreeMap<String, Double>(vc);
 		sortedPriceList.putAll(priceList);
 		System.out.println(sortedPriceList);
 		
-		List<Double> itarablePriceList = new ArrayList<Double>(sortedPriceList.values());
+		List<Double> itarablePriceList = new ArrayList<Double>(priceList.values());
 		
-		System.out.println(itarablePriceList);
+		//System.out.println(itarablePriceList);
 		
 		Iterator<Double> it = itarablePriceList.iterator();
 		while(it.hasNext()) {
